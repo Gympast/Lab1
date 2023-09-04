@@ -1,5 +1,10 @@
-﻿string input = "29535123p48723487597645723645";
+﻿
+string input = "29535123p48723487597645723645";
 long sum = 0;
+
+Console.WriteLine($"Skriv en en rad med siffror och tecken.");
+input = Console.ReadLine();
+
 Console.WriteLine(input);
 Console.WriteLine();
 
