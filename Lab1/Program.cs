@@ -11,7 +11,6 @@ for (int i = 0; i < input.Length; i++)
         {
             if (input[i] == input[j])
             {
-                Console.ForegroundColor = ConsoleColor.Gray;
                 Console.Write(input.Substring(0, i));
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write(input.Substring(i, j - i + 1));
