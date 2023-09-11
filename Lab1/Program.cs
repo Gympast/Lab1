@@ -1,19 +1,33 @@
 ﻿
 string input = "29535123p48723487597645723645";
+
+input = "2552465262234";
 long sum = 0;
 
 Console.WriteLine($"Skriv en en rad med siffror och tecken.");
-input = Console.ReadLine();
+//input = Console.ReadLine();
 
 Console.WriteLine(input);
 Console.WriteLine();
 
 for (int i = 0; i < input.Length; i++)
 {
+    bool nextTo = true;
     for (int j = i + 1; j < input.Length; j++)
     {
         if (Char.IsDigit(input[j]))
         {
+            if (nextTo)
+            {
+                if (input[i] == input[j])
+                {
+                    break;
+                }
+                else
+                {
+                    nextTo = false;
+                }
+            }
             if (input[i] == input[j])
             {
                 Console.Write(input.Substring(0, i));
@@ -32,4 +46,6 @@ for (int i = 0; i < input.Length; i++)
         }
     }
 }
-Console.WriteLine(sum);
+
+Console.WriteLine();
+Console.WriteLine($"Summan av dom markerade talen är {sum}");
